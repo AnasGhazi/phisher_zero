@@ -1,0 +1,40 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+phisherzero/
+
+# IDEs and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Env and secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Data, models, large files
+data/
+models/
+*.zip
+*.tar.gz
+*.h5
+*.pt
+
+# Logs
+*.log
+
+# Tests / coverage
+.coverage
+htmlcov/
+EOF
