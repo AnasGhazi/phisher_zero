@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phisher Zero - Settings</title>
+  <link rel="stylesheet" href="tailwind.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="theme-light min-h-screen">
+  <div class="max-w-2xl mx-auto px-6 py-10">
+    <!-- Header -->
+    <header class="mb-10">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center shadow-xl border border-secondary/30">
+            <!-- Anglerfish Icon -->
+            <svg class="w-12 h-12 text-secondary" viewBox="0 0 100 100" fill="none" xmlns="assets/icon48.png">
+              <path d="M30 50 Q30 30 50 30 Q70 30 70 50 Q70 70 50 70 Q30 70 30 50" fill="#003718" stroke="#d6d283" stroke-width="2"/>
+              <circle cx="40" cy="45" r="6" fill="#d6d283" opacity="0.9"/>
+              <circle cx="50" cy="45" r="6" fill="#d6d283" opacity="0.9"/>
+              <circle cx="60" cy="45" r="6" fill="#d6d283" opacity="0.9"/>
+              <path d="M35 55 L65 55" stroke="#d6d283" stroke-width="2" stroke-linecap="round"/>
+              <path d="M35 60 L65 60" stroke="#d6d283" stroke-width="2" stroke-linecap="round"/>
+              <path d="M50 30 Q50 20 50 15" stroke="#d6d283" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="50" cy="15" r="4" fill="#d6d283" opacity="0.9"/>
+              <path d="M25 50 Q20 45 20 50 Q20 55 25 50" fill="#003718" stroke="#d6d283" stroke-width="1"/>
+              <path d="M75 50 Q80 45 80 50 Q80 55 75 50" fill="#003718" stroke="#d6d283" stroke-width="1"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold text-text-primary tracking-tight">PHISHER ZERO</h1>
+            <p class="text-text-secondary font-medium">Extension Settings</p>
+          </div>
+        </div>
+        <button id="darkModeToggle" class="w-12 h-12 rounded-2xl bg-card hover:bg-card-hover border border-border flex items-center justify-center transition-all duration-200">
+          <svg id="darkIcon" class="w-6 h-6 text-text-primary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg id="lightIcon" class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Settings Card -->
+    <div class="bg-card rounded-3xl shadow-xl border border-border p-8 backdrop-blur-sm">
+      <div class="flex items-center gap-2 mb-6">
+        <div class="w-1 h-6 bg-secondary rounded-full"></div>
+        <h2 class="text-xl font-bold text-text-primary">Configuration</h2>
+      </div>
+      
+      <!-- Dark Mode Toggle -->
+      <div class="mb-8 pb-8 border-b border-border">
+        <div class="flex items-center justify-between">
+          <div class="flex-1">
+            <label class="text-base font-semibold text-text-primary mb-2 block">Dark Mode</label>
+            <p class="text-sm text-text-secondary leading-relaxed">Toggle between light and dark theme</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer ml-6">
+            <input type="checkbox" id="darkModeToggleSetting" class="sr-only peer">
+            <div class="w-12 h-6 bg-status-waiting peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-primary peer-checked:to-primary/90 shadow-sm"></div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Mock Mode Toggle -->
+      <div class="mb-8 pb-8 border-b border-border">
+        <div class="flex items-center justify-between">
+          <div class="flex-1">
+            <label class="text-base font-semibold text-text-primary mb-2 block">Use Mock Mode</label>
+            <p class="text-sm text-text-secondary leading-relaxed">Enable to use simulated data instead of real API calls for testing</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer ml-6">
+            <input type="checkbox" id="mockModeToggle" class="sr-only peer">
+            <div class="w-12 h-6 bg-status-waiting peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-primary peer-checked:to-primary/90 shadow-sm"></div>
+          </label>
+        </div>
+      </div>
+
+      <!-- API Base URL -->
+      <div class="mb-8">
+        <label for="apiBaseUrl" class="block text-base font-semibold text-text-primary mb-3">
+          API Base URL
+        </label>
+        <input
+          type="text"
+          id="apiBaseUrl"
+          placeholder="https://api.example.com"
+          class="w-full px-4 py-3.5 border border-border rounded-2xl focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all outline-none text-text-primary bg-card hover:bg-card-hover focus:bg-card shadow-sm"
+        />
+        <p class="text-sm text-text-secondary mt-3 leading-relaxed">Enter your backend API endpoint URL</p>
+      </div>
+
+      <!-- Save Button -->
+      <div class="flex items-center gap-4">
+        <button
+          id="saveButton"
+          class="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-secondary font-semibold py-3.5 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2.5 transform hover:scale-[1.02] active:scale-[0.98] border border-secondary/20"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Save Settings</span>
+        </button>
+        
+        <div id="saveConfirmation" class="hidden flex items-center gap-2.5 text-safe font-semibold">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Settings saved!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="mt-8 bg-gradient-to-br from-primary/20 to-primary/10 border border-secondary/30 rounded-3xl p-5 shadow-sm">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-2xl bg-secondary/20 flex items-center justify-center flex-shrink-0 border border-secondary/30">
+          <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold text-text-primary mb-1.5">About Mock Mode</p>
+          <p class="text-sm text-text-secondary leading-relaxed">When enabled, the extension will use simulated data for testing purposes. Disable it to connect to your actual backend API.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/api.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

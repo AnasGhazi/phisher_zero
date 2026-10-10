@@ -1,0 +1,74 @@
+[
+  {
+    "email_id": 1,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 5.435943603515625e-05
+  },
+  {
+    "email_id": 2,
+    "status": "success",
+    "predicted": "legitimate",
+    "expected": "legitimate",
+    "match": true,
+    "reason": "No obvious phishing indicators",
+    "elapsed_sec": 6.985664367675781e-05
+  },
+  {
+    "email_id": 3,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request",
+    "elapsed_sec": 5.245208740234375e-05
+  },
+  {
+    "email_id": 4,
+    "status": "success",
+    "predicted": "legitimate",
+    "expected": "legitimate",
+    "match": true,
+    "reason": "No obvious phishing indicators",
+    "elapsed_sec": 5.3882598876953125e-05
+  },
+  {
+    "email_id": 5,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 6.270408630371094e-05
+  },
+  {
+    "email_id": 6,
+    "status": "success",
+    "predicted": "legitimate",
+    "expected": "legitimate",
+    "match": true,
+    "reason": "No obvious phishing indicators",
+    "elapsed_sec": 4.2438507080078125e-05
+  },
+  {
+    "email_id": 7,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 5.7220458984375e-05
+  },
+  {
+    "email_id": 8,
+    "status": "success",
+    "predicted": "legitimate",
+    "expected": "legitimate",
+    "match": true,
+    "reason": "No obvious phishing indicators",
+    "elapsed_sec": 6.556510925292969e-05
+  }
+]

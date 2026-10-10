@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Generator - Phisher Zero</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    canvas {
+      border: 1px solid #ddd;
+      margin: 10px;
+      background: white;
+    }
+    button {
+      background: #1A73E8;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+    }
+    button:hover {
+      background: #1557B0;
+    }
+    .instructions {
+      background: #E3F2FD;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ Phisher Zero Icon Generator</h1>
+    <div class="instructions">
+      <p><strong>Instructions:</strong></p>
+      <ol>
+        <li>Click "Generate Icons" to create placeholder icons</li>
+        <li>Right-click each canvas and "Save image as..."</li>
+        <li>Save as icon16.png, icon48.png, and icon128.png in the assets folder</li>
+      </ol>
+    </div>
+    
+    <div>
+      <h3>16x16 Icon</h3>
+      <canvas id="icon16" width="16" height="16"></canvas>
+    </div>
+    
+    <div>
+      <h3>48x48 Icon</h3>
+      <canvas id="icon48" width="48" height="48"></canvas>
+    </div>
+    
+    <div>
+      <h3>128x128 Icon</h3>
+      <canvas id="icon128" width="128" height="128"></canvas>
+    </div>
+    
+    <button onclick="generateIcons()">Generate Icons</button>
+    <button onclick="downloadAll()">Download All</button>
+  </div>
+
+  <script>
+    function drawShieldIcon(canvas, size) {
+      const ctx = canvas.getContext('2d');
+      const scale = size / 128; // Base size is 128
+      
+      // Clear canvas
+      ctx.clearRect(0, 0, size, size);
+      
+      // Background gradient
+      const gradient = ctx.createLinearGradient(0, 0, size, size);
+      gradient.addColorStop(0, '#1A73E8');
+      gradient.addColorStop(1, '#1557B0');
+      ctx.fillStyle = gradient;
+      
+      // Draw shield shape
+      ctx.beginPath();
+      ctx.moveTo(size * 0.5, size * 0.1);
+      ctx.lineTo(size * 0.8, size * 0.2);
+      ctx.lineTo(size * 0.9, size * 0.5);
+      ctx.lineTo(size * 0.9, size * 0.8);
+      ctx.lineTo(size * 0.5, size * 0.95);
+      ctx.lineTo(size * 0.1, size * 0.8);
+      ctx.lineTo(size * 0.1, size * 0.5);
+      ctx.lineTo(size * 0.2, size * 0.2);
+      ctx.closePath();
+      ctx.fill();
+      
+      // Draw checkmark
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = size * 0.08;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      ctx.moveTo(size * 0.35, size * 0.5);
+      ctx.lineTo(size * 0.45, size * 0.6);
+      ctx.lineTo(size * 0.65, size * 0.4);
+      ctx.stroke();
+    }
+    
+    function generateIcons() {
+      const sizes = [16, 48, 128];
+      sizes.forEach(size => {
+        const canvas = document.getElementById(`icon${size}`);
+        drawShieldIcon(canvas, size);
+      });
+    }
+    
+    function downloadCanvas(canvas, filename) {
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+    
+    function downloadAll() {
+      downloadCanvas(document.getElementById('icon16'), 'icon16.png');
+      setTimeout(() => downloadCanvas(document.getElementById('icon48'), 'icon48.png'), 100);
+      setTimeout(() => downloadCanvas(document.getElementById('icon128'), 'icon128.png'), 200);
+    }
+    
+    // Generate on load
+    window.onload = generateIcons;
+  </script>
+</body>
+</html>
+

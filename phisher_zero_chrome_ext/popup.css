@@ -1,0 +1,133 @@
+/* Custom styles for Phisher Zero popup */
+/* Using system font stack for better performance and CSP compliance */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Color Variables - Light Mode */
+.theme-light {
+  --primary: #003718;
+  --secondary: #d6d283;
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --card: #ffffff;
+  --card-hover: #f3f4f6;
+  --border: rgba(0, 55, 24, 0.1);
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --status-waiting: #f3f4f6;
+  --status-loading: rgba(214, 210, 131, 0.1);
+  --status-safe: rgba(16, 185, 129, 0.1);
+  --status-danger: rgba(239, 68, 68, 0.1);
+  --safe: #10b981;
+  --danger: #ef4444;
+}
+
+/* Color Variables - Dark Mode */
+.theme-dark {
+  --primary: #003718;
+  --secondary: #d6d283;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --card: #1a1a1a;
+  --card-hover: #252525;
+  --border: rgba(214, 210, 131, 0.2);
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --status-waiting: #252525;
+  --status-loading: rgba(214, 210, 131, 0.15);
+  --status-safe: rgba(16, 185, 129, 0.15);
+  --status-danger: rgba(239, 68, 68, 0.15);
+  --safe: #34d399;
+  --danger: #f87171;
+}
+
+/* Apply CSS Variables */
+.theme-light,
+.theme-dark {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-card { background-color: var(--card); }
+.bg-card-hover { background-color: var(--card-hover); }
+.bg-status-waiting { background-color: var(--status-waiting); }
+.bg-status-loading { background-color: var(--status-loading); }
+.bg-status-safe { background-color: var(--status-safe); }
+.bg-status-danger { background-color: var(--status-danger); }
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-text-primary { color: var(--text-primary); }
+.text-text-secondary { color: var(--text-secondary); }
+.text-safe { color: var(--safe); }
+.text-danger { color: var(--danger); }
+
+.border-border { border-color: var(--border); }
+.border-primary { border-color: var(--primary); }
+.border-secondary { border-color: var(--secondary); }
+.border-safe { border-color: var(--safe); }
+.border-danger { border-color: var(--danger); }
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Pulse animation for status updates */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glow effect for secondary color */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--secondary);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary);
+  }
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}

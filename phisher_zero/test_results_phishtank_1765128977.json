@@ -1,0 +1,92 @@
+[
+  {
+    "email_id": 1,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 8.440017700195312e-05
+  },
+  {
+    "email_id": 2,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 6.389617919921875e-05
+  },
+  {
+    "email_id": 3,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 5.793571472167969e-05
+  },
+  {
+    "email_id": 4,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 5.459785461425781e-05
+  },
+  {
+    "email_id": 5,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 5.626678466796875e-05
+  },
+  {
+    "email_id": 6,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 7.319450378417969e-05
+  },
+  {
+    "email_id": 7,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 6.365776062011719e-05
+  },
+  {
+    "email_id": 8,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 7.009506225585938e-05
+  },
+  {
+    "email_id": 9,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 5.412101745605469e-05
+  },
+  {
+    "email_id": 10,
+    "status": "success",
+    "predicted": "phishing",
+    "expected": "phishing",
+    "match": true,
+    "reason": "Contains urgent CTA or credential request; Contains unsecured http link",
+    "elapsed_sec": 7.081031799316406e-05
+  }
+]
